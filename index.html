@@ -16,7 +16,7 @@
                 <div class="slide">
                     <img :src="images[index]" alt="">
                     <div class="dots">
-                        <i v-for="(image, this_index) in images.length" class="fa-circle"
+                        <i v-for="(image, this_index) in images" class="fa-circle"
                             :class="this_index == index ? 'far' : 'fas'"></i>
                     </div>
                 </div>
