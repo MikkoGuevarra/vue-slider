@@ -17,6 +17,7 @@ var app = new Vue({
                 this.index = 0;
 
             }
+
         },
         prevImg() {
             this.index -= 1;
@@ -24,6 +25,16 @@ var app = new Vue({
                 this.index = this.images.length -1;
 
             }
+        },
+        moveForward() {
+            setInterval(() => {
+                this.nextImg()
+
+            }, 2000)
         }
+
+    },
+    created() {
+        this.moveForward();
     }
 });
