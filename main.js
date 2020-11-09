@@ -30,10 +30,14 @@ var app = new Vue({
             clock = setInterval(() => {
                 this.nextImg()
 
-            }, 2000)
+            }, 4000)
         },
         clear() {
             clearInterval(clock)
+        },
+        //creo funzione con parametro 'index' in cui associa index corrente del click
+        dotClick(index) {
+            this.index = index;
         }
 
     },

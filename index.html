@@ -17,7 +17,8 @@
                     <img @mouseover="clear()" @mouseleave="moveForward" :src="images[index]" alt="">
                     <div class="dots">
                         <i v-for="(image, this_index) in images" class="fa-circle"
-                            :class="this_index == index ? 'far' : 'fas'"></i>
+                            :class="this_index == index ? 'far' : 'fas'"
+                                @click="dotClick(this_index)"></i>
                     </div>
                 </div>
                 <div class="right-side">
