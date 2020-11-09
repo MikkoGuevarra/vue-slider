@@ -11,13 +11,17 @@
         <div id="root">
             <div class="slider-container">
                 <div class="left-side">
-                    <i class="fas fa-angle-left fa-4x"></i>
+                    <i @click="prevImg()" class="fas fa-angle-left fa-4x"></i>
                 </div>
                 <div class="slide">
-                    <img :src="images[0]" alt="">
+                    <img :src="images[index]" alt="">
+                    <div class="dots">
+                        <i v-for="(image, this_index) in images.length" class="fa-circle"
+                            :class="this_index == index ? 'far' : 'fas'"></i>
+                    </div>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-angle-right fa-4x"></i>
+                    <i @click="nextImg()" class="fas fa-angle-right fa-4x"></i>
                 </div>
 
             </div>

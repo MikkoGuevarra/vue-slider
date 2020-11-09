@@ -9,5 +9,21 @@ var app = new Vue({
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThwpG4N2BYXE8zDXyTb7oo48wht07qj6T9bA&usqp=CAU'
         ]
 
+    },
+    methods: {
+        nextImg() {
+            this.index += 1;
+            if (this.index >= this.images.length) {
+                this.index = 0;
+
+            }
+        },
+        prevImg() {
+            this.index -= 1;
+            if (this.index < 0) {
+                this.index = this.images.length -1;
+
+            }
+        }
     }
 });
