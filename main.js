@@ -27,10 +27,13 @@ var app = new Vue({
             }
         },
         moveForward() {
-            setInterval(() => {
+            clock = setInterval(() => {
                 this.nextImg()
 
             }, 2000)
+        },
+        clear() {
+            clearInterval(clock)
         }
 
     },

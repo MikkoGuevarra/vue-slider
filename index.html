@@ -14,7 +14,7 @@
                     <i @click="prevImg()" class="fas fa-angle-left fa-4x"></i>
                 </div>
                 <div class="slide">
-                    <img :src="images[index]" alt="">
+                    <img @mouseover="clear()" @mouseleave="moveForward" :src="images[index]" alt="">
                     <div class="dots">
                         <i v-for="(image, this_index) in images" class="fa-circle"
                             :class="this_index == index ? 'far' : 'fas'"></i>
